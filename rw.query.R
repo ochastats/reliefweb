@@ -9,6 +9,12 @@
 #
 #  Author: Luis Capelo | capelo@un.org | @luiscape
 
+# API bidings: 
+# All dates have to be converted into UNIX time (with milisseconds). 
+# to --> &filter[field]=date.created&filter[value][to]=
+# from --> &filter[field]=date.created&filter[value][from]=
+# (as.double(as.POSIXct(as.Date(paste(year, month, day, sep="-"))))*1000) # this converst to UNIX time in seconds. 
+
 
 rw.query <- function(type = NULL,  # These are the only two options available: "report" and "job".
                      limit = NULL,  # Can be a number from 1 to 1000 or "all".
