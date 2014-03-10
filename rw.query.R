@@ -1,3 +1,6 @@
+#### TRAINING ####
+# This branch was created solely for hte purposes of training on how to use GitHub. 
+
 #### ReliefWeb Package ####
 # This script yet-to-be-package has been written with th objective of exploring
 # data from the ReliefWeb service for research purposes.
@@ -6,7 +9,7 @@
 # The documentation for the API is available at http://apidoc.rwlabs.org/
 #
 #  Version:  0.1.1
-#  This is the training version. 
+#   
 #
 #  Author: Luis Capelo | capelo@un.org | @luiscape
 
