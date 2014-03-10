@@ -1,5 +1,5 @@
 #### TRAINING ####
-# This branch was created solely for hte purposes of training on how to use GitHub. 
+# This branch was created solely for hte purposes of training on how to use GitHub.
 
 #### ReliefWeb Package ####
 # This script yet-to-be-package has been written with th objective of exploring
@@ -9,7 +9,7 @@
 # The documentation for the API is available at http://apidoc.rwlabs.org/
 #
 #  Version:  0.1.1
-#   
+#
 #
 #  Author: Luis Capelo | capelo@un.org | @luiscape
 
