@@ -9,16 +9,16 @@
 #
 #  Author: Luis Capelo | capelo@un.org | @luiscape
 
-# API bidings: 
-# All dates have to be converted into UNIX time (with milisseconds). 
+# API bidings:
+# All dates have to be converted into UNIX time (with milisseconds).
 # to --> &filter[field]=date.created&filter[value][to]=
 # from --> &filter[field]=date.created&filter[value][from]=
-# (as.double(as.POSIXct(as.Date(paste(year, month, day, sep="-"))))*1000) # this converst to UNIX time in seconds. 
+# (as.double(as.POSIXct(as.Date(paste(year, month, day, sep="-"))))*1000) # this converst to UNIX time in seconds.
 
 
 rw.query <- function(type = NULL,  # These are the only two options available: "report" and "job".
                      limit = NULL,  # Can be a number from 1 to 1000 or "all".
-                     country = NULL,  # Queries a particular country (or a list). 'all' queries all countries. 
+                     country = NULL,  # Queries a particular country (or a list). 'all' queries all countries.
                      field1 = NULL,
                      field2 = NULL,
                      field3 = NULL,
@@ -48,18 +48,18 @@ rw.query <- function(type = NULL,  # These are the only two options available: "
                     type,
                     "/list",
                     "?limit=",
-                    ifelse(limit == "all", 1000, limit), # Handles the `all` case for the `limit` parameter. 
+                    ifelse(limit == "all", 1000, limit), # Handles the `all` case for the `limit` parameter.
                     sep = "")
 
   # URL for acquiring the 'count' metadata.
   count.url <- paste("http://api.rwlabs.org/v0/",
                      type,
                      "/count",
-                     "?limit=", 
-                     ifelse(limit == "all", 1000, limit), # Handles the `all` case for the `limit` parameter. 
+                     "?limit=",
+                     ifelse(limit == "all", 1000, limit), # Handles the `all` case for the `limit` parameter.
                      sep = "")
 
-  # Conditional statements for building the query URL. 
+  # Conditional statements for building the query URL.
   if (is.null(field1) == FALSE) { query.url <- paste("&fields[include][0]=", field1, sep = "") }
   if (is.null(field2) == FALSE) { query.url <- paste(query.url,"&fields[include][1]=", field2, sep = "") }
   if (is.null(field3) == FALSE) { query.url <- paste(query.url,"&fields[include][2]=", field3, sep = "") }
